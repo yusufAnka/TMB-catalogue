@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import "./responsive.css";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -15,7 +15,7 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import NotFound from "./screens/NotFound";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
@@ -25,13 +25,14 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/profile" component={ProfileScreen} />
         <Route path="/cart/:id?" component={CartScreen} />
-        <Route path="/shipping" component={PaymentScreen} />
+        <Route path="/shipping" component={ShippingScreen} />
+        <Route path="/payment" component={PaymentScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route path="/order" component={OrderScreen} />
-        <Route path="/*" component={NotFound} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;
