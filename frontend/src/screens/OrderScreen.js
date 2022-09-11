@@ -100,9 +100,9 @@ const OrderScreen = ({ match }) => {
                   </div>
                   <div className="col-md-8 center">
                     <h5>
-                      <strong>Order info</strong>
+                      <strong>Delivery info</strong>
                     </h5>
-                    <p>Shipping: {order.shippingAddress.country}</p>
+                    <p>Delivery: {order.shippingAddress.country}</p>
                     <p>Pay method: {order.paymentMethod}</p>
                     {order.isPaid ? (
                       <div className="bg-info p-2 col-12">
@@ -179,7 +179,7 @@ const OrderScreen = ({ match }) => {
                         </div>
                         <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
                           <h4>SUBTOTAL</h4>
-                          <h6>${item.qty * item.price}</h6>
+                          <h6>N{item.qty * item.price}</h6>
                         </div>
                       </div>
                     ))}
@@ -194,25 +194,25 @@ const OrderScreen = ({ match }) => {
                       <td>
                         <strong>Products</strong>
                       </td>
-                      <td>${order.itemsPrice}</td>
+                      <td>N{order.itemsPrice}</td>
                     </tr>
                     <tr>
                       <td>
-                        <strong>Shipping</strong>
+                        <strong>Delivery</strong>
                       </td>
-                      <td>${order.shippingPrice}</td>
+                      <td>N{order.shippingPrice}</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <td>
                         <strong>Tax</strong>
                       </td>
-                      <td>${order.taxPrice}</td>
-                    </tr>
+                      <td>N{order.taxPrice}</td>
+                    </tr> */}
                     <tr>
                       <td>
                         <strong>Total</strong>
                       </td>
-                      <td>${order.totalPrice}</td>
+                      <td>N{order.totalPrice}</td>
                     </tr>
                   </tbody>
                 </table>

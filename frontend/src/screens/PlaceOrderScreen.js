@@ -22,8 +22,8 @@ const PlaceOrderScreen = ({ history }) => {
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
-  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
-  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 200 : 250);
+  cart.taxPrice = addDecimals(Number((0).toFixed(2)));
   cart.totalPrice = (
     Number(cart.itemsPrice) +
     Number(cart.shippingPrice) +
@@ -85,10 +85,13 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Order info</strong>
+                  <strong>Delivery info</strong>
                 </h5>
-                <p>Shipping: {cart.shippingAddress.country}</p>
-                <p>Pay method: {cart.paymentMethod}</p>
+                <p>Company: TMB Express Ltd</p>
+                {/* <p>Delivery Service: {cart.shippingAddress.country} </p> */}
+                <p>Contact: +234 8134448582</p>
+                <p>Address: No. 5 Amsaf Plaza ByePass Gusau</p>
+                <p>Pay method:{cart.paymentMethod}</p>
               </div>
             </div>
           </div>
@@ -136,7 +139,7 @@ const PlaceOrderScreen = ({ history }) => {
                     </div>
                     <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
                       <h4>SUBTOTAL</h4>
-                      <h6>${item.qty * item.price}</h6>
+                      <h6>N{item.qty * item.price}</h6>
                     </div>
                   </div>
                 ))}
@@ -151,25 +154,19 @@ const PlaceOrderScreen = ({ history }) => {
                   <td>
                     <strong>Products</strong>
                   </td>
-                  <td>${cart.itemsPrice}</td>
+                  <td>N{cart.itemsPrice}</td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>Shipping</strong>
+                    <strong>Delivery</strong>
                   </td>
-                  <td>${cart.shippingPrice}</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Tax</strong>
-                  </td>
-                  <td>${cart.taxPrice}</td>
+                  <td>N{cart.shippingPrice}</td>
                 </tr>
                 <tr>
                   <td>
                     <strong>Total</strong>
                   </td>
-                  <td>${cart.totalPrice}</td>
+                  <td>N{cart.totalPrice}</td>
                 </tr>
               </tbody>
             </table>

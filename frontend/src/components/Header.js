@@ -32,8 +32,8 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-              <p>+255 768 356 890</p>
-              <p>info@zpunet.com</p>
+              <p>+234 8134448582</p>
+              <p>tmbxpress@gmail.com</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
               <Link to="">
@@ -42,15 +42,15 @@ const Header = () => {
               <Link to="">
                 <i className="fab fa-instagram"></i>
               </Link>
-              <Link to="">
+              <a href="https://www.linkedin.com/company/tmb-express/">
                 <i className="fab fa-linkedin-in"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-youtube"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-pinterest-p"></i>
-              </Link>
+              </a>
+              <a href="https://wa.me/c/2348134448582">
+                <i className="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://twitter.com/tmb_express">
+                <i class="fab fa-twitter"></i>
+              </a>
             </div>
           </div>
         </div>

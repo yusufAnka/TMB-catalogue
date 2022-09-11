@@ -1,42 +1,50 @@
 import React from "react";
+import img from '../../src/banner.jpeg'
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="justify-content-center d-flex">
-        <div className="card-name">
-          <img
-            alt="mastercard"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="visa"
-            src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="paypal"
-            src="https://pbs.twimg.com/media/EfTZlEnWAAMn1lX.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="express"
-            src="https://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/American-Express-icon.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="discover"
-            src="https://icons-for-free.com/iconfiles/png/512/cash+checkout+discover+network+online+shopping+payment+method-1320191225548835050.png"
-          />
-        </div>
+      <div className="bannerC">
+        <img className="banner" alt="banner" src={img} />
+        <img className="banner" alt="banner" src={img} />
+        <img className="banner" alt="banner" src={img} />
+      </div>
+      
       </div>
     </div>
   );
 };
 
 export default Footer;
+
+{/* <div className="card-name">
+<img
+  alt="instagram"
+  src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+/>
+</div>
+<div className="card-name"><a href="https://twitter.com/tmb_express"><img
+  alt="twitter"
+  src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg"
+/></a>
+
+</div>
+<div className="card-name">
+<img
+  alt="Linkedin"
+  src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+/>
+</div>
+<div className="card-name">
+<img
+  alt="facebook"
+  src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+/>
+</div>
+<div className="card-name">
+<img
+  alt="whatsapp"
+  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+/>
+</div> */}
